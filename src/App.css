@@ -1,38 +1,375 @@
-.App {
-  text-align: center;
+/* CSS */
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Jacques Francois";
+  src: url("./fonts/JacquesFrancoisShadow-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: montserrat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  display: flex;
+  background: #01081f;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  gap: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logo-png {
+  margin-left: 1em;
+  width: 140px;
+  height: 80px;
+  padding: 0.8em;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+a.active,
+a:hover {
+  color: black;
+  background: #fff526;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.sign-in-up {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10em;
+  margin-right: 1em;
+}
+.sign-button {
+  background-color: #fff526;
+  color: black;
+  font-size: 18px;
+  padding: 7px 13px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 0.8em;
+  cursor: pointer;
+  height: 100%;
+  width: 120px;
+  transition: all 0.2s ease;
+}
+
+.sign-button:hover {
+  transform: translateY(-2px);
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media only screen and (max-width: 1361px) {
+  .sign-in-up {
+    margin-left: 0;
+  }
+  .background-ellipse {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .hero-jpg {
+    width: 20%;
+    height: 20%;
+  }
+
+  .background-ellipse {
+    height: 1000px;
+    background: #01081f;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media only screen and (max-width: 1068px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    max-height: calc(100vh - 80px); /* Add this line */
+    background-color: #01081f;
+    transition: all 0.5s ease;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  nav ul li:hover {
+    border-radius: 0;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .checkbtn {
+    display: block;
+    cursor: pointer;
+    line-height: 80px;
+    margin-right: 20px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+  }
+  .sign-in-up {
+    margin-top: 1em;
+    display: flex;
+    gap: 1.5em;
+  }
+  .sign-button {
+    width: 160px;
+  }
+}
+section {
+  height: 1000px;
+  position: relative;
+}
+.background-ellipse {
+  margin-top: 5em;
+  height: 500px;
+  background: #01081f;
+  display: flex;
+}
+
+.text-column {
+  display: flex;
+  flex-direction: column;
+}
+.selleverything-text {
+  margin-top: 2em;
+  padding-left: 4em;
+}
+.sell-text {
+  font-family: "Jacques Francois";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 59px;
+
+  color: #fdfafa;
+
+  transform: rotate(0.5deg);
+}
+.buttonanddivider {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  margin-top: 1em;
+}
+.row-button {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contact-us {
+  background-color: #fff526;
+  color: black;
+  font-size: 22px;
+  padding: 7px 13px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 1.1em;
+  cursor: pointer;
+  height: 60%;
+  width: 35%;
+  transition: all 0.2s ease;
+}
+
+.contact-us:hover {
+  transform: translateY(-3px);
+}
+.column-divider {
+  margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+.trusted-text {
+  width: auto;
+  height: auto;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+}
+.image-column {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-jpg {
+  width: 80%;
+  height: 90%;
+}
+.ellipse-svg {
+  position: absolute;
+  width: 100%;
+  top: 23%;
+  z-index: -1;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: #01081f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff526;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9a9867;
+}
+footer {
+  height: 492px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #01081f;
+}
+.footer-child1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100%;
+  width: 80%;
+  position: relative;
+}
+.quleep-svg {
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  width: 250px;
+  height: 110px;
+  cursor: pointer;
+}
+.footer-child1text {
+  margin-top: 2em;
+  color: white;
+  width: 55%;
+  line-height: 150%;
+}
+.footer-child2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 60%;
+  height: 80%;
+  padding-top: 3em;
+}
+.a-tag {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.footer-child3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 70%;
+  height: 80%;
+  padding-top: 3em;
+}
+.footer-child4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  height: 100%;
+  padding: 2em;
+}
+.android-svg {
+  width: 250px;
+  height: 200px;
+}
+.ios-svg {
+  width: 250px;
+  height: 200px;
+}
+.subscribe-input {
+  background: #d9d9d9;
+  height: 50px;
+  width: 70%;
+  border: 1px solid #fffdfd;
+  border-radius: 20px;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: black;
+  padding: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subscribe-button {
+  background-color: #01081f;
+  border: 1px solid white;
+  color: white;
+  font-size: 18px;
+  padding: 7px 13px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 0.8em;
+  cursor: pointer;
+  height: 80px;
+  width: 300px;
+  transition: all 0.2s ease;
+}
+.subscribe-button:hover {
+  transform: translateY(-2px);
 }
