@@ -8,6 +8,12 @@ import Android from "./assests/android.svg";
 import Ios from "./assests/ios.svg";
 import Mp3 from "./assests/logospell.mp3";
 import Volume from "./assests/volume_up.svg";
+import Facebook from "./assests/facebook.svg";
+import Linkedin from "./assests/linkedin.svg";
+import YouTube from "./assests/youtube.svg";
+import Twitter from "./assests/twitter.svg";
+
+import Instagram from "./assests/instagram.svg";
 
 import "./App.css";
 
@@ -100,103 +106,56 @@ function App() {
 
         <img src={Background} class="background-png" />
       </section>
-
-      {/* <footer>
-        <div className="footer-child1">
-          <img src={Quleep} alt="Your Image" className="quleep-svg" />
-
-          <div className="footer-child1text">
-            Arnxt is a product by Quleep. Quleep specialises in developing B2B2C
-            Augmented reality product for business across the Globe. We are
-            expert in creating immersive and outstanding visual delight that
-            intensify human interaction through emerging technologies.
-          </div>
-        </div>
-        <div className="footer-child2">
-          <div className="a-tag">Resources</div>
-          <div className="a-tag">Blogs</div>
-          <div className="a-tag">Career</div>
-          <div className="a-tag">Privacy Policy</div>
-          <div className="a-tag">Terms and Conditions</div>
-          <div className="a-tag">Submit your query</div>
-        </div>
-        <div className="footer-child3">
-          <div className="a-tag">Contact us</div>
-          <div className="a-tag">
-            Noida - Serenia, IHDP Business Park, Sector 127, Noida-201303
-          </div>
-          <div className="a-tag">
-            Kolkata - 11th floor Kamdhenu Building 75C, Park Street,
-            Kolkata-700016 .
-          </div>
-          <div className="a-tag">+91 9883019518</div>
-          <div className="a-tag">reach us at care@arnxt.com</div>
-        </div>
-        <div className="footer-child4">
-          <img src={Android} alt="Your Image" className="android-svg" />
-          <img src={Ios} alt="Your Image" className="ios-svg" />
-          <div className="a-tag">Subscribe to arnxt newsletter</div>
-          <input className="subscribe-input"></input>
-          <button className="subscribe-button">Subscribe</button>
-        </div>
-      </footer> */}
       <footer>
         <div class="footer-row">
-          <div class="footer-col">
-            <h4>Column 1</h4>
-            <ul>
-              <li>
-                <a href="#">Link 1</a>
-              </li>
-              <li>
-                <a href="#">Link 2</a>
-              </li>
-              <li>
-                <a href="#">Link 3</a>
-              </li>
-            </ul>
+          <div class="footer-col1">
+            <img src={Quleep} alt="Your Image" className="quleep-svg" />
+
+            <div className="footer-child1text">
+              Arnxt is a product by Quleep. Quleep specialises in developing
+              B2B2C Augmented reality product for business across the Globe. We
+              are expert in creating immersive and outstanding visual delight
+              that intensify human interaction through emerging technologies.
+            </div>
           </div>
-          <div class="footer-col">
-            <h4>Column 2</h4>
-            <ul>
-              <li>
-                <a href="#">Link 1</a>
-              </li>
-              <li>
-                <a href="#">Link 2</a>
-              </li>
-              <li>
-                <a href="#">Link 3</a>
-              </li>
-            </ul>
+          <div class="footer-col2">
+            <div className="a-tag">Resources</div>
+            <div className="a-tag">Blogs</div>
+            <div className="a-tag">Career</div>
+            <div className="a-tag">Privacy Policy</div>
+            <div className="a-tag">Terms and Conditions</div>
+            <div className="a-tag">Submit your query</div>
           </div>
-          <div class="footer-col">
-            <h4>Column 3</h4>
-            <ul>
-              <li>
-                <a href="#">Link 1</a>
-              </li>
-              <li>
-                <a href="#">Link 2</a>
-              </li>
-              <li>
-                <a href="#">Link 3</a>
-              </li>
-            </ul>
+          <div class="footer-col3">
+            <div className="a-tag">Contact us</div>
+            <div className="a-tag">
+              Noida - Serenia, IHDP Business Park, Sector 127, Noida-201303
+            </div>
+            <div className="a-tag">
+              Kolkata - 11th floor Kamdhenu Building 75C, Park Street,
+              Kolkata-700016 .
+            </div>
+            <div className="a-tag">+91 9883019518</div>
+            <div className="a-tag">reach us at care@arnxt.com</div>
           </div>
-          <div class="footer-col">
-            <h4>Column 4</h4>
-            <ul>
-              <li>
-                <a href="#">Link 1</a>
-              </li>
-              <li>
-                <a href="#">Link 2</a>
-              </li>
-              <li>
-                <a href="#">Link 3</a>
-              </li>
-            </ul>
+          <div class="footer-col4">
+            <img src={Android} alt="Your Image" className="android-svg" />
+            <img src={Ios} alt="Your Image" className="ios-svg" />
+            <div className="a-tag">Subscribe to arnxt newsletter</div>
+            <div className="inputandbutton">
+              <input className="subscribe-input"></input>
+              <button className="subscribe-button">Subscribe</button>
+            </div>
+            <div className="socialicons">
+              <img src={Facebook} alt="Your Image" className="icons" />
+              <img src={Linkedin} alt="Your Image" className="icons" />
+              <img src={YouTube} alt="Your Image" className="icons" />
+              <img src={Twitter} alt="Your Image" className="icons" />
+              <img src={Instagram} alt="Your Image" className="icons" />
+            </div>
+            <div className="copyright">
+              Copyright @2023, Quleep. All Right Reserved
+            </div>
           </div>
         </div>
       </footer>

@@ -108,10 +108,6 @@ a:hover {
   .sign-in-up {
     margin-left: 0;
   }
-
-  .ellipse-svg {
-    display: none;
-  }
   .hero-jpg {
     padding: 0;
     width: 40%;
@@ -272,19 +268,12 @@ a:hover {
   bottom: 20px;
 }
 .trusted-text {
-  width: auto;
-  height: auto;
-  font-weight: bold;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  color: white;
-}
-.image-column {
-  flex-basis: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #ffffff;
 }
 
 .hero-jpg {
@@ -312,7 +301,7 @@ a:hover {
 }
 footer {
   background-color: #01081f;
-  height: 400px;
+  height: auto;
   padding: 30px 0;
 }
 
@@ -322,24 +311,52 @@ footer {
   justify-content: space-between;
 }
 
-.footer-col {
+.footer-col1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
   flex-basis: calc(25% - 20px);
   margin-bottom: 20px;
 }
-
-.footer-col h4 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+.footer-col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 1.5em;
+  padding-top: 2em;
+  flex-basis: calc(25% - 20px);
+  margin-bottom: 20px;
 }
-
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.footer-col3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5em;
+  padding-top: 2em;
+  height: 100%;
+  flex-basis: calc(25% - 20px);
+  margin-bottom: 20px;
 }
-
-.footer-col ul li {
-  margin-bottom: 5px;
+.footer-col4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 1.3em;
+  flex-basis: calc(25% - 20px);
+  margin-bottom: 20px;
+}
+.quleep-svg {
+  position: absolute;
+  top: -10px;
+  right: 120px;
+  width: 300px;
+  height: 110px;
+  cursor: pointer;
 }
 
 @media (max-width: 992px) {
@@ -351,85 +368,45 @@ footer {
 @media (max-width: 768px) {
   .footer-row {
     flex-direction: column;
+    gap: 1em;
   }
 
   .footer-col {
     flex-basis: 100%;
   }
-
-  .footer-col:not(:last-child) {
-    margin-bottom: 30px;
+  .footer-col2 {
+    align-items: center;
+  }
+  .footer-col3 {
+    align-items: center;
+    padding: 3em;
+  }
+  .footer-col4 {
+    align-items: center;
+    padding: 1em;
   }
 }
 
-/* footer {
-  height: 492px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #01081f;
-} */
-.footer-child1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 80%;
-  position: relative;
-}
-.quleep-svg {
-  position: absolute;
-  top: 55px;
-  left: 0px;
-  width: 250px;
-  height: 110px;
-  cursor: pointer;
-}
 .footer-child1text {
   margin-top: 4em;
   color: white;
-  width: 57%;
+  width: 70%;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 200;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 20px;
   line-height: 24px;
 }
-.footer-child2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 60%;
-  height: 80%;
-  padding-top: 3em;
-}
+
 .a-tag {
   color: white;
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 200;
   font-size: 18px;
   line-height: 20px;
 }
-.footer-child3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 70%;
-  height: 80%;
-  padding-top: 3em;
-}
-.footer-child4 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1em;
-  height: 100%;
-  padding: 4em;
-}
+
 .android-svg {
   width: 200px;
   height: 70px;
@@ -440,33 +417,46 @@ footer {
   height: 70px;
   cursor: pointer;
 }
+
+.inputandbutton {
+  background-color: #d9d9d9;
+  height: 65px;
+  width: 85%;
+  border-radius: 20px;
+  display: flex;
+}
 .subscribe-input {
   background: #d9d9d9;
-  height: 100px;
-  width: 80%;
-  border: 1px solid #fffdfd;
+  height: 100%;
+  width: 100%;
   border-radius: 20px;
-  font-family: sans-serif;
-  font-size: 16px;
-  color: black;
-  padding: 15px;
 }
-
 .subscribe-button {
   background-color: #01081f;
-  border: 1px solid white;
-  color: white;
+  height: 100%;
+  width: 100%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
-  padding: 7px 13px;
-  font-weight: bold;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  border-radius: 0.8em;
-  cursor: pointer;
-  right: 0%;
-  height: 80px;
-  width: 50%;
-  transition: all 0.2s ease;
+  line-height: 24px;
+  color: #ffffff;
+  border-radius: 20px;
 }
 .subscribe-button:hover {
   transform: translateY(-2px);
+}
+.socialicons {
+  display: flex;
+  gap: 1.5em;
+  padding-left: 2em;
+}
+.copyright {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #ffffff;
 }
