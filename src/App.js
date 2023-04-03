@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Logo from "./assests/logo.png";
-import Ellipse from "./assests/ellipse.svg";
+import Background from "./assests/background.png";
 import Line from "./assests/line.svg";
 import Hero from "./assests/hero.jpg";
 import Quleep from "./assests/quleeplogo.svg";
 import Android from "./assests/android.svg";
 import Ios from "./assests/ios.svg";
-import Volume from "./assests/volume.png";
 import Mp3 from "./assests/logospell.mp3";
+import Volume from "./assests/volume_up.svg";
 
 import "./App.css";
 
@@ -78,14 +78,12 @@ function App() {
           </div>
         </ul>
       </nav>
-      <section>
-        <div className="background-ellipse">
-          <div class="text-column">
-            <div className="selleverything-text">
-              <div className="sell-text">SELL</div>
-              <div className="sell-text">EXPERIENCE</div>
-              <div className="sell-text">ANYWHERE</div>
-            </div>
+      <section class="background-container">
+        <div class="text-container">
+          <div className="selleverything-text">
+            <div className="sell-text">SELL</div>
+            <div className="sell-text">EXPERIENCE</div>
+            <div className="sell-text">ANYWHERE</div>
             <div className="buttonanddivider">
               <div className="row-button">
                 <button className="contact-us">Contact Us</button>
@@ -97,14 +95,13 @@ function App() {
               </div>
             </div>
           </div>
-
-          <div class="image-column">
-            <img src={Hero} alt="Your Image" className="hero-jpg" />
-          </div>
+          <img src={Hero} alt="Your Image" className="hero-jpg" />
         </div>
-        <img src={Ellipse} className="ellipse-svg"></img>
+
+        <img src={Background} class="background-png" />
       </section>
-      <footer>
+
+      {/* <footer>
         <div className="footer-child1">
           <img src={Quleep} alt="Your Image" className="quleep-svg" />
 
@@ -139,8 +136,68 @@ function App() {
           <img src={Android} alt="Your Image" className="android-svg" />
           <img src={Ios} alt="Your Image" className="ios-svg" />
           <div className="a-tag">Subscribe to arnxt newsletter</div>
-          <input className="subscribe-input" placeholder="Email ID"></input>
+          <input className="subscribe-input"></input>
           <button className="subscribe-button">Subscribe</button>
+        </div>
+      </footer> */}
+      <footer>
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4>Column 1</h4>
+            <ul>
+              <li>
+                <a href="#">Link 1</a>
+              </li>
+              <li>
+                <a href="#">Link 2</a>
+              </li>
+              <li>
+                <a href="#">Link 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Column 2</h4>
+            <ul>
+              <li>
+                <a href="#">Link 1</a>
+              </li>
+              <li>
+                <a href="#">Link 2</a>
+              </li>
+              <li>
+                <a href="#">Link 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Column 3</h4>
+            <ul>
+              <li>
+                <a href="#">Link 1</a>
+              </li>
+              <li>
+                <a href="#">Link 2</a>
+              </li>
+              <li>
+                <a href="#">Link 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Column 4</h4>
+            <ul>
+              <li>
+                <a href="#">Link 1</a>
+              </li>
+              <li>
+                <a href="#">Link 2</a>
+              </li>
+              <li>
+                <a href="#">Link 3</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </footer>
     </div>

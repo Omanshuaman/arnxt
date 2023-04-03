@@ -7,14 +7,12 @@
   list-style: none;
   box-sizing: border-box;
 }
-@font-face {
-  font-family: "Jacques Francois";
-  src: url("./fonts/JacquesFrancoisShadow-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+
 body {
   font-family: montserrat;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 nav {
@@ -40,8 +38,8 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 3rem;
-  justify-content: center;
+  gap: 2rem;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
 }
@@ -50,6 +48,9 @@ nav ul li a {
   color: white;
   font-size: 17px;
   padding: 7px 13px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
   border-radius: 3px;
 }
 
@@ -67,15 +68,17 @@ a:hover {
   justify-content: flex-start;
   align-items: center;
   margin-left: 10em;
-  margin-right: 1em;
+  margin-right: 5em;
 }
 .sign-button {
   background-color: #fff526;
   color: black;
   font-size: 18px;
   padding: 7px 13px;
-  font-weight: bold;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
   border-radius: 0.8em;
   cursor: pointer;
   height: 100%;
@@ -105,19 +108,13 @@ a:hover {
   .sign-in-up {
     margin-left: 0;
   }
-  .background-ellipse {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+
+  .ellipse-svg {
+    display: none;
   }
   .hero-jpg {
-    width: 20%;
-    height: 20%;
-  }
-
-  .background-ellipse {
-    height: 1000px;
-    background: #01081f;
+    padding: 0;
+    width: 40%;
   }
 }
 
@@ -132,7 +129,7 @@ a:hover {
     width: 100%;
     max-height: calc(100vh - 80px); /* Add this line */
     background-color: #01081f;
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
   }
   nav ul li {
     display: block;
@@ -147,6 +144,10 @@ a:hover {
   }
   #check:checked ~ ul {
     left: 0;
+  }
+  .sign-in-up {
+    margin-left: 0;
+    margin-right: 0;
   }
   .checkbtn {
     display: block;
@@ -166,27 +167,57 @@ a:hover {
     width: 160px;
   }
 }
-section {
-  height: 1000px;
+.background-container {
   position: relative;
-}
-.background-ellipse {
-  margin-top: 5em;
-  height: 500px;
-  background: #01081f;
+  width: 100%;
+  height: 140vh;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.text-column {
+.text-container {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 550px;
 }
+
+.background-png {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .background-png {
+    width: 400vw;
+    height: 180vh;
+  }
+  .text-container {
+    flex-direction: column;
+    align-items: center;
+    top: 38%;
+    left: 45%;
+    padding: 0.5em;
+  }
+  .contact-us {
+    width: 100%;
+  }
+}
+
 .selleverything-text {
   margin-top: 2em;
-  padding-left: 4em;
+  margin-left: 4em;
+  width: 100%;
 }
 .sell-text {
-  font-family: "Jacques Francois";
+  font-family: "Jacques Francois Shadow";
   font-style: normal;
   font-weight: 400;
   font-size: 45px;
@@ -204,22 +235,22 @@ section {
 }
 .row-button {
   height: 50%;
-  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 1em;
   align-items: center;
 }
 .contact-us {
   background-color: #fff526;
   color: black;
-  font-size: 22px;
+  font-size: 20px;
   padding: 7px 13px;
-  font-weight: bold;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Inter";
+  font-weight: 900;
   border-radius: 1.1em;
   cursor: pointer;
   height: 60%;
-  width: 35%;
+  width: 40%;
   transition: all 0.2s ease;
 }
 
@@ -227,13 +258,18 @@ section {
   transform: translateY(-3px);
 }
 .column-divider {
-  margin-left: 1em;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
   justify-content: center;
   align-items: center;
   height: 50%;
+  position: relative;
+}
+.line-svg {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
 }
 .trusted-text {
   width: auto;
@@ -253,13 +289,9 @@ section {
 
 .hero-jpg {
   width: 80%;
-  height: 90%;
-}
-.ellipse-svg {
-  position: absolute;
-  width: 100%;
-  top: 23%;
-  z-index: -1;
+  height: 100%;
+  padding: 3em;
+  margin-bottom: 1em;
 }
 
 /* width */
@@ -279,12 +311,64 @@ section {
   background: #9a9867;
 }
 footer {
+  background-color: #01081f;
+  height: 400px;
+  padding: 30px 0;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex-basis: calc(25% - 20px);
+  margin-bottom: 20px;
+}
+
+.footer-col h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 992px) {
+  .footer-col {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+  }
+
+  .footer-col {
+    flex-basis: 100%;
+  }
+
+  .footer-col:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+/* footer {
   height: 492px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   background-color: #01081f;
-}
+} */
 .footer-child1 {
   display: flex;
   flex-direction: column;
@@ -296,17 +380,21 @@ footer {
 }
 .quleep-svg {
   position: absolute;
-  top: 35px;
+  top: 55px;
   left: 0px;
   width: 250px;
   height: 110px;
   cursor: pointer;
 }
 .footer-child1text {
-  margin-top: 2em;
+  margin-top: 4em;
   color: white;
-  width: 55%;
-  line-height: 150%;
+  width: 57%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 24px;
 }
 .footer-child2 {
   display: flex;
@@ -318,6 +406,12 @@ footer {
 }
 .a-tag {
   color: white;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 20px;
 }
 .footer-child3 {
   display: flex;
@@ -331,23 +425,25 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 1em;
   height: 100%;
-  padding: 2em;
+  padding: 4em;
 }
 .android-svg {
-  width: 250px;
-  height: 200px;
+  width: 200px;
+  height: 70px;
+  cursor: pointer;
 }
 .ios-svg {
-  width: 250px;
-  height: 200px;
+  width: 200px;
+  height: 70px;
+  cursor: pointer;
 }
 .subscribe-input {
   background: #d9d9d9;
-  height: 50px;
-  width: 70%;
+  height: 100px;
+  width: 80%;
   border: 1px solid #fffdfd;
   border-radius: 20px;
   font-family: sans-serif;
@@ -366,8 +462,9 @@ footer {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 0.8em;
   cursor: pointer;
+  right: 0%;
   height: 80px;
-  width: 300px;
+  width: 50%;
   transition: all 0.2s ease;
 }
 .subscribe-button:hover {
